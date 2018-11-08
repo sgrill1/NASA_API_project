@@ -43,4 +43,16 @@ public class RoverPhotosParser {
         JSONObject rover = (JSONObject) singleImage.get("rover");
         return rover.get("name").toString();
     }
+
+    public String getLaunchDate(){
+        JSONObject singleImage = (JSONObject) imagesResults.get(0);
+        JSONObject rover = (JSONObject) singleImage.get("rover");
+        return rover.get("launch_date").toString();
+    }
+
+    public String getLandingDate(){
+        JSONObject singleImage = (JSONObject) imagesResults.get(0);
+        JSONObject rover = (JSONObject) singleImage.get("rover");
+        return rover.get("landing_date").toString();
+    }
 }
