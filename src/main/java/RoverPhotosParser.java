@@ -32,9 +32,15 @@ public class RoverPhotosParser {
         return Integer.parseInt(rover.get("total_photos").toString());
     }
 
-    public String getStatus(){
+    public String getStatus() {
         JSONObject singleImage = (JSONObject) imagesResults.get(0);
         JSONObject rover = (JSONObject) singleImage.get("rover");
         return rover.get("status").toString();
+    }
+
+    public String getRoverName(){
+        JSONObject singleImage = (JSONObject) imagesResults.get(0);
+        JSONObject rover = (JSONObject) singleImage.get("rover");
+        return rover.get("name").toString();
     }
 }
