@@ -22,13 +22,21 @@ public class tests
 
     @Test
     public void nasaRequestSuccessful(){
-        given().when().get(baseURI+basePath).then().statusCode(200).body("photos[1].sol", equalTo(1000));
-
+        given()
+                .when()
+                .get(baseURI+basePath)
+                .then()
+                .statusCode(200)
+                .body("photos[1].sol", equalTo(1000));
     }
 
     @Test
     public void makeSureThatNasaApiIsWorking() {
-        given().when().get("https://api.nasa.gov/planetary/apod?api_key="+api_key).then().statusCode(200);
+        given()
+                .when()
+                .get("https://api.nasa.gov/planetary/apod?api_key="+api_key)
+                .then()
+                .statusCode(200);
     }
 
 }
