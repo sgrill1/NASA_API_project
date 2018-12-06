@@ -2,3 +2,4 @@
 /.idea/
 /target/
 NASA_API_project.iml
+resources/api_key.properties
